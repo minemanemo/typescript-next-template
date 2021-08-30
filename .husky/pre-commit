@@ -1,0 +1,5 @@
+#!/bin/sh
+
+yarn lint
+echo "TODO: execute test command"
+echo "NOTE: commit message format"

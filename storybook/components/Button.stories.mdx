@@ -1,0 +1,79 @@
+import { Meta, Story, Canvas, Props, Description } from '@storybook/addon-docs';
+import Button from '@common/components/Button';
+import { action } from '@storybook/addon-actions';
+
+<!-- https://storybook.js.org/docs/react/essentials/controls#annotation -->
+
+<Meta
+  title="Component/Button"
+  component={Button}
+  argTypes={{
+    backgroundColor: {
+      table: { category: 'Colors' },
+      control: 'color',
+    },
+    variant: {
+      table: { category: 'Colors' },
+      control: 'select',
+      options: ['primary', 'secondary'],
+    },
+    size: {
+      table: { category: 'Sizes' },
+      control: 'select',
+      options: ['small', 'medium', 'large'],
+    },
+    label: {
+      table: { category: 'Text' },
+      control: 'text',
+    },
+    onClick: {
+      table: { category: 'Events' },
+    },
+  }}
+/>
+
+# Button Component
+
+<Description of={Button} />
+
+## Arguments
+
+---
+
+<Props of={Button} />
+
+## Example
+
+---
+
+export const Template = (args) => <Button {...args} />;
+
+### Primary
+
+<Canvas>
+  <Story
+    name="Primary"
+    args={{
+      label: 'Button Text',
+      variant: 'primary',
+      onClick: action('clicked!'),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Secondary
+
+<Canvas>
+  <Story
+    name="Secondary"
+    args={{
+      label: 'Button Text',
+      variant: 'secondary',
+      onClick: action('clicked!'),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

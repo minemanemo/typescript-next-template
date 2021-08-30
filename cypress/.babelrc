@@ -1,0 +1,3 @@
+// 해당 파일이 존재해야 babel 에러 발생하지 않음.
+// 참고: https://github.com/cypress-io/cypress/issues/8364#issuecomment-678113594
+{}

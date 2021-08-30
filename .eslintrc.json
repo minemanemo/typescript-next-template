@@ -1,0 +1,19 @@
+{
+  "extends": ["eslint-config-airbnbtsnext/typescript"],
+  "rules": {
+    "import/no-extraneous-dependencies": "off"
+  },
+  "overrides": [
+    {
+      "extends": "eslint-config-airbnbtsnext/jest",
+      "files": [
+        "src/**/?(*.)+(spec|test).+(js|jsx)",
+        "test/**/?(*.)+(spec|test).+(js|jsx)"
+      ]
+    },
+    {
+      "extends": ["eslint-config-airbnbtsnext/storybook"],
+      "files": ["./**/*.stories.(ts|tsx|jd|jsx|mdx)"]
+    }
+  ]
+}
